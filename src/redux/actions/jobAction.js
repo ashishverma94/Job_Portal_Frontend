@@ -14,8 +14,9 @@ export const jobLoadAction = (pageNumber = '', keyword = '', cat = '', location 
         type: JOB_LOAD_REQUEST
     })
 
-    try {                                 
-        const { data } = await axios.get(`/api/jobs/show/?pageNumber=${pageNumber}&keyword=${keyword}&location=${location}&cat=${cat}`)
+    try {    
+        const { data } = await axios.get(`https://job-portal-backend-three.vercel.app/api/jobs/show/?pageNumber=${pageNumber}&keyword=${keyword}&location=${location}&cat=${cat}`)                             
+        // const { data } = await axios.get(`/api/jobs/show/?pageNumber=${pageNumber}&keyword=${keyword}&location=${location}&cat=${cat}`)
         dispatch({
             type: JOB_LOAD_SUCCESS,
             payload: data
@@ -35,7 +36,7 @@ export const jobLoadSingleAction = (id) => async (dispatch) => {
     })
 
     try {
-        const { data } = await axios.get(`/api/job/${id}`)
+        const { data } = await axios.get(`https://job-portal-backend-three.vercel.app/api/job/${id}`)
         dispatch({
             type: JOB_LOAD_SINGLE_SUCCESS,
             payload: data

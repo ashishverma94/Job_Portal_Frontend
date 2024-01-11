@@ -2,3 +2,6 @@ USER CREDENTIALS---
 
 soedasyd123
 abafaaaafdc@gmail.com
+
+"proxy": "http://localhost:8000" 
+

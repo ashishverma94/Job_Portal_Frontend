@@ -7,7 +7,7 @@ export const jobTypeLoadAction = () => async (dispatch) => {
     })
 
     try {
-        const { data } = await axios.get(`api/type/jobs`)
+        const { data } = await axios.get(`https://job-portal-backend-three.vercel.app/api/type/jobs`)
         dispatch({
             type: JOB_TYPE_LOAD_SUCCESS,
             payload: data
